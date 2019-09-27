@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "./Components/Image";
-
+import {Container, Row} from 'reactstrap';
 
 
 export default function PhotoList () {
@@ -21,8 +21,12 @@ export default function PhotoList () {
     },[]);
 
     return (
-        <div className="photo">
-            <Image title= {photo.title} picture={photo.url} date={photo.date} description={photo.explanation} />
-        </div>
+
+        <Container>
+            <Row>
+                <Image title= {photo.title} picture={photo.url} date={photo.date} description={photo.explanation} />
+            </Row>
+        </Container>
+
     )
 }  
