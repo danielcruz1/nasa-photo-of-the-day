@@ -3,24 +3,29 @@ import "./App.css";
 import PhotoList from "./PhotoList";
 import styled from 'styled-components';
 
-const Title = styled.h1`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+`;
+
+const StyledH1 = styled.h1`
 color: red;
 `;
 
-const BlueH3 = styled.h3`
+const StyledH3 = styled.h3`
 color: blue;
 `;
 
 
-
-
 function App() {
   return (
-    <div className="App">
-     <Title>NASA</Title>
-       <BlueH3>Photo of the Day!</BlueH3>
-       <PhotoList/>
-    </div>
+    <Container className="App">
+     <StyledH1>NASA</StyledH1>
+       <StyledH3>Photo of the Day!</StyledH3>
+       <PhotoList />
+    </Container>
   );
 }
 
