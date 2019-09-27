@@ -1,13 +1,25 @@
 import React from "react";
 import "./App.css";
+import PhotoList from "./PhotoList";
+import styled from 'styled-components';
+
+const Title = styled.h1`
+color: red;
+`;
+
+const BlueH3 = styled.h3`
+color: blue;
+`;
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+     <Title>NASA</Title>
+       <BlueH3>Photo of the Day!</BlueH3>
+       <PhotoList/>
     </div>
   );
 }
